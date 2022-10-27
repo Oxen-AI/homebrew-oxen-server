@@ -1,4 +1,4 @@
-class Oxen < Formula
+class OxenServer < Formula
   desc "oxen-server 🐂 is the server for oxen to version and manage large machine learning datasets"
   homepage "https://www.oxen.ai"
   url "https://github.com/Oxen-AI/oxen-release/releases/download/v0.2.0/oxen-server-mac.tar.gz"
