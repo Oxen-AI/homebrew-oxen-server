@@ -6,6 +6,6 @@ class Oxen < Formula
   version "0.2.0"
 
   def install
-    bin.install "oxen"
+    bin.install "oxen-server"
   end
 end
