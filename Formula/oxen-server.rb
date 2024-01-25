@@ -1,18 +1,18 @@
 class OxenServer < Formula
   desc "🐂 oxen-server is the server for oxen to version and manage large machine learning datasets"
   homepage "https://www.oxen.ai"
-  version "0.10.7"
+  version "0.10.10"
 
   on_macos do
     if MacOS.version >= :ventura # 13
-      url "https://github.com/Oxen-AI/Oxen/releases/download/v0.10.7/oxen-server-mac-13.0-0.10.7.tar.gz"
-      sha256 "3ac0687460b0b9fd392a1b8ebaf6e27180927df8e87515f6ffc471551aafe669"
+      url "https://github.com/Oxen-AI/Oxen/releases/download/v0.10.10/oxen-server-mac-13.0-0.10.10.tar.gz"
+      sha256 "4c2b0ef9e8250aacf9aa44000eaaab279365c41ecdde2203c860b5c3b561bf64"
     elsif MacOS.version >= :monterey # 12
-      url "https://github.com/Oxen-AI/Oxen/releases/download/v0.10.7/oxen-server-mac-12.0-0.10.7.tar.gz"
-      sha256 "2e6b457dd3b651f4bf1f1b8ba3a3d36427ca53d6ee1a6d54b3fc7d66de5db682"
+      url "https://github.com/Oxen-AI/Oxen/releases/download/v0.10.10/oxen-server-mac-12.0-0.10.10.tar.gz"
+      sha256 "0e7014184a9d632dff1597bd1477ec58a46168ce38f4ca3b44c6835026533cd6"
     elsif MacOS.version >= :big_sur # 11
-      url "https://github.com/Oxen-AI/Oxen/releases/download/v0.10.7/oxen-server-mac-11.0-0.10.7.tar.gz"
-      sha256 "1a8f33da10bdb35e5b8479b57118247229c0f5f0fa765b84582745b54e830747"
+      url "https://github.com/Oxen-AI/Oxen/releases/download/v0.10.10/oxen-server-mac-11.0-0.10.10.tar.gz"
+      sha256 "7e26e2cb37ada15d983eafaf4e88a41044b6e0898071f6497248ce562ae67160"
     end
   end
 
