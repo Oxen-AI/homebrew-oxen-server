@@ -1,0 +1,56 @@
+name: Update Homebrew Formula
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to update to (e.g. 0.25.0)'
+        required: true
+  workflow_call:
+    inputs:
+      version:
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-formula:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout homebrew-oxen-server repository
+        uses: actions/checkout@v4
+        with:
+          repository: oxen-ai/homebrew-oxen-server
+
+      - name: Set version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+          else
+            echo "VERSION=${{ inputs.version }}" >> $GITHUB_ENV
+          fi
+
+      - name: Make scripts executable
+        run: |
+          chmod +x update_formula.sh
+          chmod +x compute_hashes.sh
+
+      - name: Update formula
+        run: ./update_formula.sh ${{ env.VERSION }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: update oxen-server formula to version ${{ env.VERSION }}"
+          title: "Update oxen-server formula to version ${{ env.VERSION }}"
+          body: |
+            Updates the Homebrew formula for oxen-server to version ${{ env.VERSION }}
+            
+            This PR was automatically created by GitHub Actions.
+          branch: update-formula-${{ env.VERSION }}
+          delete-branch: true
+          base: main 
