@@ -23,8 +23,8 @@ jobs:
       - name: Checkout homebrew-oxen-server repository
         uses: actions/checkout@v4
         with:
-          repository: oxen-ai/homebrew-oxen-server
           token: ${{ secrets.HOMEBREW_DEPLOY_PAT }}
+          repository: oxen-ai/homebrew-oxen-server
 
       - name: Set version
         id: version
