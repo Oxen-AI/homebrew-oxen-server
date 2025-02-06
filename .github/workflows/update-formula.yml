@@ -11,6 +11,9 @@ on:
       version:
         required: true
         type: string
+    secrets:
+      HOMEBREW_DEPLOY_PAT:
+        required: true
 
 permissions:
   contents: write
