@@ -2,19 +2,19 @@ class OxenServer < Formula
   desc "Lightning fast data version control system for structured and unstructured machine learning datasets. We aim to make versioning datasets as easy as versioning code."
   homepage "https://oxen.ai"
   license "Apache-2.0"
-  version "0.42.4"
+  version "0.42.5"
 
   on_macos do
     depends_on macos: :big_sur
 
     on_arm do
-      url "https://github.com/Oxen-AI/Oxen/releases/download/v0.42.4/oxen-server-macos-arm64.tar.gz"
-      sha256 "40a4787fd81d81e9b31db0a7281927d923de8959defa3a5b60f8a32d410ac791"
+      url "https://github.com/Oxen-AI/Oxen/releases/download/v0.42.5/oxen-server-macos-arm64.tar.gz"
+      sha256 "db10c503ce040474eecebdc1aecbf95382c3a78552849c9b0b2d32e1d0f2cd64"
     end
 
     on_intel do
-      url "https://github.com/Oxen-AI/Oxen/releases/download/v0.42.4/oxen-server-macos-x86_64.tar.gz"
-      sha256 "dfbd26efd984f612dd988a4eb24d33fee1f2b54e130085760d4852e6bc026e92"
+      url "https://github.com/Oxen-AI/Oxen/releases/download/v0.42.5/oxen-server-macos-x86_64.tar.gz"
+      sha256 "78bebf3bb8bbd33dd95749d3825767ae18be180a3060c1dcb2f3ee36d4066215"
     end
   end
 
